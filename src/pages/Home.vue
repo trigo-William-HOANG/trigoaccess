@@ -24,13 +24,14 @@ import Searchbar from "./../components/Searchbar.vue";
 import app1 from '../assets/app1.webp';
 import app2 from '../assets/app2.webp';
 import app3 from '../assets/app3.webp';
+import trigoaccess from '../assets/trigoaccess.webp';
 import { ref } from 'vue';
 
 // Extraction des données pour afficher les applications
 const cardData = [
   {
-    image: app1,
-    title: 'A 1',
+    image: trigoaccess,
+    title: 'TRIGOACCESS',
     description: 'Description pour la carte 1.',
     link: '/test'
   },

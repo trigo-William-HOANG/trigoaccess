@@ -2,7 +2,7 @@
   <Sidebar />
   <Layout>
     <template #link class="pre-barre">
-      <Button label="Créer une demande" />
+      <Button label="Créer une demande" @click="redirectToForm()"/>
     </template>
     <template #content-title>
       <h1>DASHBOARD</h1>
@@ -59,6 +59,9 @@ const previewItems = ref([
   { icon: '⚙️', label: 'Test - HOANG William' }
 ])
 
+const redirectToForm = () => {
+    window.location.href = '/main'
+}
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
     <Sidebar />
     <Layout>
       <template #link class="pre-barre">
-        <Button label="Créer une demande" />
+        <Button label="Créer une demande" @click="redirectToForm()" />
         <Searchbar class="barre" @update:search="updateSearchQuery" />
       </template>
       <template #content-title>
@@ -69,6 +69,9 @@
     searchQuery.value = query
     fetchData(query)
   }
+  const redirectToForm = () => {
+    window.location.href = '/main'
+}
   
   // Load initial data
   fetchData('')

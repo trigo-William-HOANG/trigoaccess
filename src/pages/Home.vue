@@ -132,15 +132,10 @@ body.sidebar-closed .layout {
   margin-top: 3%;
 }
 
-/* Contenu adapté au comportement de la sidebar */
+Contenu adapté au comportement de la sidebar
 body.sidebar-closed .content-main {
   margin-left: 60px;
 }
-.searchbar{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(183%, -50%);
-}
+/*  */
 
 </style> 

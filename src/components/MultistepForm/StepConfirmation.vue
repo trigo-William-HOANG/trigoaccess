@@ -32,7 +32,7 @@
         console.log('Form data:', this.formData);
         this.submitted = true;
         setTimeout(() => {
-        window.location.href = '/Test';  
+        window.location.href = '/test';  
         }, 2000);
       },
     },

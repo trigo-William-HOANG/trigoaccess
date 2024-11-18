@@ -21,18 +21,13 @@
   import StepConfirmation from '@/components/MultistepForm/StepConfirmation.vue';
   
   export default {
-    components: { Step1, Step2, Step3 },
+    components: { Step1},
     data() {
     return {
       currentStep: 1,
       totalSteps: 4,
       formData: {
-        name: '',
-        surname: '',
-        age: '',
-        address: '',
-        selectedOption: '',
-        additionalInfo: '',
+       // Ajouter les data à envoyer
       },
     };
     },
@@ -44,7 +39,7 @@
         case 2:
           return Step2;
         case 3:
-          return Step3;
+          return Step3; 
         case 4:
           return StepConfirmation; // Confirmation step
         default:
@@ -91,7 +86,7 @@
   
   .form-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 80%;
     background: white;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

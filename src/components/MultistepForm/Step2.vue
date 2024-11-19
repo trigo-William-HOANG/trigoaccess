@@ -54,9 +54,9 @@
       <div class="form-field">
         <label for="accesIntranet">Accès Intranet:</label>
         <select id="accesIntranet" v-model="formData.accesIntranet">
-          <option>Only Users</option>
+          <option>Utilisateurs seulement</option>
           <option>Admins</option>
-          <option>Guests</option>
+          <option>Invités</option>
         </select>
       </div>
 

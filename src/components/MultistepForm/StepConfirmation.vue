@@ -64,9 +64,9 @@ export default {
       this.submitted = true;
 
       // Redirect after a delay
-      // setTimeout(() => {
-      //   window.location.href = '/test';
-      // }, 2000);
+      setTimeout(() => {
+        window.location.href = '/test';
+      }, 2000);
     },
   },
 };

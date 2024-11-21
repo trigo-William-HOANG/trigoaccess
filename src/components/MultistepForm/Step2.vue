@@ -4,7 +4,7 @@
     <form @submit.prevent="submitDetails">
       <div class="form-field">
         <label for="poste">Poste:</label>
-        <input id="poste" v-model="formData.poste" type="text" placeholder="Entrer le poste" required />
+        <input id="poste" v-model="formData.poste" type="text" placeholder="Entrer le poste"  />
       </div>
 
       <div class="form-field">

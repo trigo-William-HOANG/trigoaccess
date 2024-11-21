@@ -25,18 +25,12 @@
             v-model="formData.name"
             type="text"
             placeholder="Entrer name"
-            required
           />
         </div>
 
         <div>
           <label for="date">Date d'émission de la demande :</label>
-          <input
-            id="date"
-            v-model="formData.date"
-            type="date"
-            required
-          />
+          <input id="date" v-model="formData.date" type="date" />
         </div>
 
         <!-- Conditional Fields -->
@@ -71,8 +65,8 @@
         </div>
 
         <div class="button-group">
-          <br>
-          <button class="next-button" type="submit">Next</button>
+          <br />
+          <button class="next-button" type="submit">Suivant</button>
         </div>
       </form>
     </div>
@@ -87,7 +81,7 @@ export default {
       options: [
         { label: 'Nouvel arrivant', value: 'option1', description: 'Indication ou emoticone à mettre ici' },
         { label: 'Modification', value: 'option2', description: 'Indication ou emoticone à mettre ici' },
-        { label: 'Départ', value: 'option3', description: 'Indication ou emoticone à mettre ici' }, 
+        { label: 'Départ', value: 'option3', description: 'Indication ou emoticone à mettre ici' },
         { label: 'Prolongation uniquement', value: 'option4', description: 'Indication ou emoticone à mettre ici' },
       ],
       selectedOption: this.formData.selectedOption || null,
@@ -96,7 +90,8 @@ export default {
   methods: {
     selectOption(optionValue) {
       this.selectedOption = optionValue;
-      this.formData.selectedOption = optionValue; // Update form data with the selected option
+      this.formData.selectedOption = optionValue;
+      this.$emit('updateSteps', optionValue); // Notify parent of the selected option
     },
     nextStep() {
       this.$emit('next', { ...this.formData });
@@ -104,6 +99,8 @@ export default {
   },
 };
 </script>
+
+
 
 <style scoped>
 .step-button-choice {
